@@ -80,5 +80,8 @@ function checkIsComplete() {
     if (currentOrder.toString() == correctOrder.toString()) {
         let activeLink = document.querySelector('.active')
         activeLink.classList.add('finished')
+    } else{
+        let activeLink = document.querySelector('.active')
+        activeLink.classList.remove('finished')
     }
 }
