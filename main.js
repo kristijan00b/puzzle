@@ -77,11 +77,10 @@ function checkIsComplete() {
         const slice = allSlices[i]
         currentOrder.push(window.getComputedStyle(slice).getPropertyValue('order'))
     }
+    let activeLink = document.querySelector('.active')
     if (currentOrder.toString() == correctOrder.toString()) {
-        let activeLink = document.querySelector('.active')
         activeLink.classList.add('finished')
     } else{
-        let activeLink = document.querySelector('.active')
         activeLink.classList.remove('finished')
     }
 }
